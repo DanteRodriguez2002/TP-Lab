@@ -49,7 +49,7 @@ $( "#btn-follow" ).on( "click", function() {
         $( "#name-field" ).removeClass("border-danger")
         $( "#comment-field" ).removeClass("border-danger")
         $( ".error" ).hide()
-        $( ".text-box-comments").append(`<div class="commet"><b>${name} </b> ${text} <button type="button" class="btn btn-outline-danger ml-5 btn-delete">Danger</button></div>`)
+        $( ".text-box-comments").append(`<div class="commet"><b>${name} </b> ${text} <button type="button" class="btn btn-outline-danger ml-5 btn-delete">Eliminar</button></div>`)
         
     }
     
