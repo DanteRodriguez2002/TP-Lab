@@ -8,30 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-    <style>
-        body{
-            font-family: 'Montserrat', sans-serif;
-            background-color: #F4F4F5;
-        }
-        .profile-photo{
-            border-style: solid;
-            border-radius: 50%;
-            border-color: #3B82F6;
-        }
-
-        .card-rounded{
-            border-radius: 30px;
-            background-color: white;
-            
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
   <body>
     <nav class="navbar bg-primary">
         <div class="container-fluid ">
           <img src="static/undefined - Imgur.png" class="navbar-brand" alt="">
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Ingresa tu usuario" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="Ingresa tu usuario" aria-label="Search" id="name-field">
           </form>
         </div>
       </nav>
@@ -52,8 +36,8 @@
                         <p class="text-secondary">Trabajando en <b>Lawn N</b></p>
                     </div>
                     <div class="col-4">
-                        <div class="d-flex align-items-end justify-content-end" style="height: 100%;">
-                            <button type="button" class="btn btn-primary">Seguir</button>
+                        <div class="d-flex align-items-end justify-content-end btn-follow">
+                            <button type="button" class="btn btn-primary" id="btn-follow">Seguir</button>
                         </div>
                         
                     </div>
@@ -66,31 +50,31 @@
 
       <section class="container mt-5">
         <div class="row">
-            <div class="col-8">
+            <div class="col-8 mb-5">
                 <div class="card card-rounded">
                     <div class="card-body">
                         <p class="text-secondary px-4">Publicado hace 1 semana</p>
-                        <img src="static/feed-img.jpg" alt="" style="width:100%; border-radius: 40px; padding: 20px;">
+                        <img src="static/feed-img.jpg" alt="" class="feed-img">
                         <div class="row px-4">
                             <div class="col">
-                                <button type="button" class="btn btn-primary">Me gusta</button>
+                                <button type="button" class="btn btn-primary" id="btn-like">Me gusta</button>
                             </div>
                             <div class="col">
-                                <p class="text-secondary text-likes text-end"><b>0</b> Likes</p>
+                                <p class="text-secondary text-likes text-end"><span id="cont-likes"><b>0</b></span> Likes</p>
                             </div>
                         </div>
                         <div class="mt-5 px-4">
                             <h5>Comentarios</h5>
                         </div>
                         <div class="text-box-comments px-4">
-                            <p>Aca deben aparecer los comentarios</p>
                         </div>
-                        <div class="row px-4">
+                        <div class="row px-4 mb-4">
                             <div class="col-10">
-                                <input type="text" class="form-control" placeholder="Deja tu comentario...">
+                                <input type="text" class="form-control" placeholder="Deja tu comentario..." id="comment-field">
+                                <div class="error hidden"></div>
                             </div>
                             <div class="col-auto">
-                                <button type="button" class="btn btn-primary">Comentar</button>
+                                <button type="button" class="btn btn-primary" id="btn-comment">Comentar</button>
                             </div>
                         </div>
                     </div>
@@ -100,7 +84,14 @@
                 <div class="card card-rounded">
                     <div class="card-body">
                         <h5 class="card-title">Sobre mi</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                        <p class="card-text">¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y 
+                            emocionante ciudad de Tokio,Japón.Me encanta capturar la 
+                            esencia de la vida urbana a través de mi lente,explorando 
+                            el constraste ente la arquitectura moderna y las tradiciones 
+                            centenarias que conviven en esta metrópolis única.
+                            Desde rascacielos deslumbrantes y calles bulliciosas hasta 
+                            templos serenos y jardines tranquilos, encuentro inspiracion 
+                            en cada rincón de esta increíble ciudad.</p>
                     </div>
                 </div>
             </div>
@@ -123,5 +114,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
 </html>
